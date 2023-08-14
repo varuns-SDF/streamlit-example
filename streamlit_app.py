@@ -3,6 +3,7 @@ import altair as alt
 import math
 import pandas as pd
 import streamlit as st
+import sentry_sdk as sty
 
 """
 # Welcome to Streamlit!
@@ -14,7 +15,10 @@ forums](https://discuss.streamlit.io).
 
 In the meantime, below is an example of what you can do with just a few lines of code:
 """
-
+sentry_sdk.init(
+    dsn="",
+    traces_sample_rate=1.0
+)
 
 with st.echo(code_location='below'):
     total_points = st.slider("Number of points in spiral", 1, 5000, 2000)
