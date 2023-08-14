@@ -16,7 +16,7 @@ forums](https://discuss.streamlit.io).
 In the meantime, below is an example of what you can do with just a few lines of code:
 """
 sentry_sdk.init(
-    dsn="",
+    dsn="https://50400b5453d523026567b0eddc1536a9@o4505702918848512.ingest.sentry.io/4505702924353536",
     traces_sample_rate=1.0
 )
 
