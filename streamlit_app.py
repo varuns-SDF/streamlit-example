@@ -4,6 +4,7 @@ import math
 import pandas as pd
 import streamlit as st
 import sentry_sdk as sty
+import logging
 
 """
 # Welcome to Streamlit!
@@ -19,7 +20,7 @@ sentry_sdk.init(
     dsn="https://50400b5453d523026567b0eddc1536a9@o4505702918848512.ingest.sentry.io/4505702924353536",
     traces_sample_rate=1.0
 )
-
+logging.exception("NOP")
 with st.echo(code_location='below'):
     total_points = st.slider("Number of points in spiral", 1, 5000, 2000)
     num_turns = st.slider("Number of turns in spiral", 1, 100, 9)
